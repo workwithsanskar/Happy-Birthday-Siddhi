@@ -1,4 +1,3 @@
-
         * {
             margin: 0;
             padding: 0;
@@ -13,7 +12,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 15px;
             line-height: 1.6;
         }
         
@@ -21,14 +20,14 @@
             width: 100%;
             max-width: 800px;
             background: #fffdf7;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08), 
                         0 0 0 1px #e8d9c5,
                         inset 0 0 20px rgba(255, 255, 255, 0.7);
             overflow: hidden;
             position: relative;
-            padding: 40px;
-            margin: 20px;
+            padding: 25px 20px;
+            margin: 10px;
         }
         
         .book-cover {
@@ -46,50 +45,52 @@
         .book-content {
             position: relative;
             z-index: 2;
-            padding: 40px;
+            padding: 25px 20px;
             background: #fffdf7;
             border-left: 1px solid #e8d9c5;
-            margin-left: 20px;
+            margin-left: 15px;
         }
         
         .header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             position: relative;
         }
         
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
+            font-size: 2.2rem;
             color: #5d4037;
             margin-bottom: 10px;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+            line-height: 1.2;
         }
         
         .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #8d6e63;
             font-style: italic;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         
         .quote {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             text-align: center;
-            margin: 30px 0;
-            padding: 20px;
+            margin: 25px 0;
+            padding: 18px 15px;
             font-style: italic;
             color: #5d4037;
             border-top: 1px dashed #d7ccc8;
             border-bottom: 1px dashed #d7ccc8;
             position: relative;
+            line-height: 1.5;
         }
         
         .quote::before, .quote::after {
             content: '"';
-            font-size: 3rem;
+            font-size: 2.2rem;
             color: #bcaaa4;
             position: absolute;
             opacity: 0.7;
@@ -97,29 +98,31 @@
         
         .quote::before {
             top: 5px;
-            left: 10px;
+            left: 5px;
         }
         
         .quote::after {
-            bottom: -20px;
-            right: 10px;
+            bottom: -15px;
+            right: 5px;
         }
         
         .message {
-            font-size: 1.2rem;
-            margin: 30px 0;
-            text-align: justify;
+            font-size: 1.1rem;
+            margin: 25px 0;
+            text-align: left;
             color: #4e342e;
         }
         
         .message p {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
         
         .wish-button {
             display: block;
-            margin: 40px auto 20px;
-            padding: 14px 30px;
+            width: 100%;
+            max-width: 280px;
+            margin: 35px auto 15px;
+            padding: 16px 25px;
             background: linear-gradient(to right, #8b4513, #a0522d);
             color: white;
             border: none;
@@ -169,8 +172,8 @@
         
         .floating-icon {
             position: absolute;
-            font-size: 1.8rem;
-            opacity: 0.15;
+            font-size: 1.5rem;
+            opacity: 0.12;
             animation: float 15s ease-in-out infinite;
         }
         
@@ -215,17 +218,17 @@
                 transform: translateY(0) rotate(0deg) scale(1); 
             }
             33% { 
-                transform: translateY(-20px) rotate(120deg) scale(1.1); 
+                transform: translateY(-15px) rotate(120deg) scale(1.1); 
             }
             66% { 
-                transform: translateY(10px) rotate(240deg) scale(0.9); 
+                transform: translateY(8px) rotate(240deg) scale(0.9); 
             }
         }
         
         .confetti {
             position: fixed;
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             opacity: 0.9;
             animation: fall linear forwards;
@@ -242,65 +245,176 @@
         
         .page-corner {
             position: absolute;
-            bottom: 20px;
-            right: 20px;
-            width: 40px;
-            height: 40px;
+            bottom: 15px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
             background: linear-gradient(135deg, transparent 50%, #e8d9c5 50%);
-            border-radius: 0 0 0 8px;
+            border-radius: 0 0 0 6px;
             z-index: 2;
         }
         
         .signature {
             text-align: right;
-            margin-top: 40px;
+            margin-top: 30px;
             font-style: italic;
             color: #8d6e63;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
         
-        @media (max-width: 768px) {
+        /* Small phones (up to 360px) */
+        @media (max-width: 360px) {
+            body {
+                padding: 10px;
+            }
+            
             .book-container {
-                padding: 20px;
+                padding: 15px 10px;
+                margin: 5px;
+                border-radius: 8px;
             }
             
             .book-content {
-                padding: 20px;
-                margin-left: 0;
+                padding: 15px 10px;
+                margin-left: 10px;
             }
             
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            .quote {
-                font-size: 1.2rem;
-            }
-            
-            .message {
-                font-size: 1.1rem;
-            }
-            
-            .floating-icon {
-                font-size: 1.5rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
             h1 {
                 font-size: 1.8rem;
             }
             
+            .subtitle {
+                font-size: 1rem;
+            }
+            
             .quote {
                 font-size: 1.1rem;
+                padding: 15px 10px;
+                margin: 20px 0;
+            }
+            
+            .quote::before, .quote::after {
+                font-size: 1.8rem;
             }
             
             .message {
                 font-size: 1rem;
+                margin: 20px 0;
+            }
+            
+            .message p {
+                margin-bottom: 15px;
             }
             
             .wish-button {
-                padding: 12px 25px;
+                padding: 14px 20px;
                 font-size: 1rem;
+                max-width: 250px;
+            }
+            
+            .floating-icon {
+                font-size: 1.2rem;
+            }
+            
+            .page-corner {
+                width: 25px;
+                height: 25px;
+                bottom: 10px;
+                right: 10px;
+            }
+            
+            .signature {
+                margin-top: 25px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Medium phones (361px to 480px) */
+        @media (min-width: 361px) and (max-width: 480px) {
+            .book-container {
+                padding: 20px 15px;
+            }
+            
+            .book-content {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .quote {
+                font-size: 1.15rem;
+            }
+            
+            .message {
+                font-size: 1.05rem;
+            }
+            
+            .wish-button {
+                max-width: 260px;
+            }
+        }
+        
+        /* Tablets (481px to 768px) */
+        @media (min-width: 481px) and (max-width: 768px) {
+            .book-container {
+                padding: 30px 25px;
+            }
+            
+            .book-content {
+                padding: 30px 25px;
+                margin-left: 20px;
+            }
+            
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            .quote {
+                font-size: 1.3rem;
+            }
+            
+            .message {
+                font-size: 1.15rem;
+            }
+            
+            .floating-icon {
+                font-size: 1.7rem;
+            }
+        }
+        
+        /* Desktop (769px and above) */
+        @media (min-width: 769px) {
+            .book-container {
+                padding: 40px 35px;
+            }
+            
+            .book-content {
+                padding: 40px 35px;
+                margin-left: 25px;
+            }
+            
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            .quote {
+                font-size: 1.4rem;
+                padding: 25px 20px;
+            }
+            
+            .message {
+                font-size: 1.2rem;
+            }
+            
+            .floating-icon {
+                font-size: 2rem;
+                opacity: 0.15;
+            }
+            
+            .wish-button {
+                padding: 16px 35px;
+                font-size: 1.2rem;
             }
         }

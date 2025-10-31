@@ -9,7 +9,7 @@ document.getElementById("wishBtn").addEventListener("click", function () {
   }, 150);
 
   // Create confetti
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 80; i++) {
     const confetti = document.createElement("div");
     confetti.classList.add("confetti");
 
@@ -17,7 +17,7 @@ document.getElementById("wishBtn").addEventListener("click", function () {
     confetti.style.left = Math.random() * 100 + "vw";
 
     // Random size
-    const size = Math.random() * 10 + 5;
+    const size = Math.random() * 8 + 5;
     confetti.style.width = size + "px";
     confetti.style.height = size + "px";
 
